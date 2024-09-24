@@ -1,18 +1,41 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
+import Project from "../components/Project.astro"
 ---
 
 <Layout title="Min personlige nettside">
 	<div class="flex items-center justify-center h-[80vh]">
+
+		<ul>
+			<li>Resume</li>
+			<li>GitHub</li>
+			<li>Linkedin</li>
+		</ul>
+
 		<h1
-			class="text-[#FB4D3D] text-5xl h-fit ">
+			class="text-[#FB4D3D] text-5xl h-fit font-bold">
 			MATS KVANVIK</h1>
+	</div>
+
+	<div class="flex items-center justify-around">
+		<Project
+			title="This website"
+			description="This website is made as part of a course in learning Astro for web development"
+			github="https://github.com/B1uskyy/variant-astro-kurs"/>
+
+		<Project title="TEEEEST 2" />
+		<Project title="TEEEEST 3" />
+		<Project title="TEEEEST 4" />
+
 	</div>
 
 
 </Layout>
 
 <style>
+	:root {
+		height: 200vh;
+	}
 
 </style>

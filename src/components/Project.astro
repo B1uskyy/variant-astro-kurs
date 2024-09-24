@@ -1,3 +1,18 @@
 ---
-$END$
+import {Astro} from "astro/env";
+interface Props {
+    title: string;
+    description: string;
+    github: string;
+
+}
+const { title, description, github } = Astro.props;
 ---
+
+<div
+        class="bg-blue-300 h-[30vh] w-[20vw] flex flex-col justify-evenly items-center p-3">
+
+    <h1 class="text-white">{title}</h1>
+    <p class="text-white">{description}</p>
+    <a href={github}>Link to project!</a>
+</div>
